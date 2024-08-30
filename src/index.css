@@ -16,4 +16,14 @@ code {
     monospace;
 }
 
+.aboutsection {
+  background-image: url('./components/media/aboutimage.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.shadower {
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
 

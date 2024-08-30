@@ -273,3 +273,18 @@ html {
   background-position: top;
   background-repeat: no-repeat;
 }
+
+/**/
+
+.hero {
+  background: url('./components/media/landingbg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aboutsection {
+  background-image: url('./components/media/aboutimage.jpeg');
+  background-size: cover;
+  background-position: center;
+}
