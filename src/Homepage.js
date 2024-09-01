@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import FAQ from './components/FAQ'
 
 import about1 from './components/media/about1.jpeg'
-import hotel from './components/media/btpaulista.jpeg'
+import about2 from './components/media/about2.jpeg'
+import hotel from './components/media/hotelsaopualo.jpeg'
 import kelvin from './components/media/kelvinhost.jpeg'
 
 import host1 from './components/media/profkelly.jpeg'
@@ -45,13 +47,12 @@ const Homepage = () => {
                 <div className='flex items-center space-x-6 text-[#3f3f3f] text-xl'>
                     <a href="#home-section" className='hover:border-b-2 duration-100 border-[#3f3f3f]'>Home</a>
                     <a href="#speakers-section" className='hover:border-b-2 duration-100 border-[#3f3f3f]'>Speakers</a>
-                    <a href="#sponsors-section" className='hover:border-b-2 duration-100 border-[#3f3f3f]'>Sponsors</a>
                     <a href="#schedule" className='hover:border-b-2 duration-100 border-[#3f3f3f]'>Schedule</a>
-                    <a href="/deal-room" className='hover:border-b-2 duration-100 border-[#3f3f3f]'>Deal Room</a>
+                    <a href='/dealroom.pdf' download className='hover:border-b-2 duration-100 border-[#3f3f3f]'>Deal Room</a>
                 </div>
 
-                <div className='ml-auto w-40'>
-                    <h1 className='bg-gradient-to-r from-[#005720] to-[#10582b] text-white font-semibold text-center py-3 px-0 rounded-lg'>Sponsor Today</h1>
+                <div className='ml-auto w-40 hover:scale-110 duration-200'>
+                    <a href="sponsors.pdf" download className='bg-gradient-to-r from-[#005720] to-[#10582b] text-white font-semibold text-center py-3 px-4 rounded-lg'>Sponsor Today</a>
                 </div>
             </div>
             <div className='w-full'>
@@ -61,7 +62,7 @@ const Homepage = () => {
                         <h1 className='text-8xl text-[#35bc3d] font-bold'>Africa Digital Economy Summit 2024</h1>
                         <div className='flex mt-8'>
                             <h1 className='bg-[#005720] font-semibold mr-8 p-3 py-2 rounded-xl text-gray-200 text-2xl shadow-gray-200 shadow-sm'>G20 Edition</h1>
-                            <h1 className='font-bold text-[#95d5b2] text-2xl p-4 py-2'>22-25 October 2024</h1>
+                            <h1 className='font-bold text-[#95d5b2] text-2xl p-4 py-2'>27-31 October, 2024</h1>
                         </div>
                         <div className='mt-6 text-3xl text-gray-100'>Digital Transformation for Sustainable Growth: Africa’s Path to a Connected Future</div>
                     </div>
@@ -78,11 +79,11 @@ const Homepage = () => {
                             </div>
                         </div>
                         <div className='flex flex-row-reverse w-full justify-center items-center'>
-                            <div>
-                                <img className='w-[400px] h-[300px] overflow-hidden rounded-xl shadower' src={about1} />
+                            <div className='w-[400px] h-[300px] overflow-hidden rounded-xl shadower'>
+                                <img className='h-[300px] w-[600px]' src={about2} />
                             </div>
                             <div className='w-[45%] pr-8'>
-                                <p className='text-xl text-gray-200'>The African Digital Economy Summit is an impactful and forward-thinking conference designed to expedite the realization of Africa’s digital economy aspirations. The summit serves as a dynamic platform where key stakeholders, thought leaders, innovators, policymakers, and industry experts converge to foster collaboration, share insights, and device strategic solutions for advancing Africa’s digital landscape.</p>
+                                <p className='text-xl text-gray-200'>In November 2024, the Group of 20 Industrialized Nations (G20) will hold their annual summit, focusing on the theme "Building a Just World and a Sustainable Planet." Understanding the critical role of inclusive digital transformation in fostering economic growth at both national and local levels, the G20 is actively engaging with global stakeholders to promote and enhance inclusive digital development.</p>
                             </div>
                         </div>
                     </div>
@@ -90,31 +91,35 @@ const Homepage = () => {
                 </div>
                 <div className='w-full flex justify-center bg-cover bg-center bg-[url("./components/media/venuebg.jpeg")] py-12 items-center'>
                     <div className='h-[300px] w-[450px] overflow-hidden mr-4 shadower rounded-xl overflow-hidden'>
-                        <img className='w-full' src={hotel} />
+                        <img className='h-full' src={hotel} />
                     </div>
                     <div className='h-[300px] w-[450px] flex flex-col shadower rounded-xl ml-4 p-4 backdrop-blur-xl'>
-                        <h1 className='text-6xl font-bold text-gray-200'>The Venue</h1>
+                        <h1 className='text-6xl font-bold text-gray-500'>The Venue</h1>
                         <h1 className='mt-4 text-3xl font-semibold text-white'>Intercontinental Hotels, Sao Paulo</h1>
                         <div className='flex items-center mt-auto'>
-                            <button className='mr-4 p-2 px-3 rounded-xl text-white border-white-2 shadower'>Book Today</button>
-                            <button className='mr-4 p-2 px-3 rounded-xl bg-red-400'>Get Directions</button>
+                            <a target='blank' href='https://www.ihg.com/intercontinental/hotels/us/en/sao-paulo/saoha/hoteldetail?cm_mmc=GoogleMaps-_-IC-_-BR-_-SAOHA'>
+                                <button className='mr-4 p-2 px-3 rounded-lg bg-gray-600 text-white hover:text-gray-600 hover:bg-white duration-200 font-bold border-white-2 shadower'>Book Today</button>
+                            </a>
+                            <a target='blank' href='https://www.google.com/maps/dir//Alameda+Santos,+1123+-+Jardim+Paulista,+S%C3%A3o+Paulo+-+SP,+01419-001,+Brazil/@-23.5657743,-46.7364809,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce59c643816cef:0xc82580c2052d077e!2m2!1d-46.6540793!2d-23.565796?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D'>
+                                <button className='mr-4 p-2 px-3 rounded-lg bg-gray-600 text-white font-bold border-white-2 shadower hover:text-gray-600 hover:bg-white duration-200'>Get Directions</button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div className='flex justify-center py-12'>
-                    <div className='text-8xl font-bold'>
+                <div className='flex justify-center items-center py-12 bg-gradient-to-r from-green-500 to-lime-500'>
+                    <div className='text-8xl font-bold text-white'>
                         <h1>Meet<br /> the Host</h1>
                     </div>
-                    <div className='h-[200px] w-[200px] rounded-full overflow-hidden ml-4'>
+                    <div className='h-[250px] w-[250px] rounded-full overflow-hidden ml-4'>
                         <img className='w-full' src={kelvin} />
                     </div>
                     <div className='ml-4 flex flex-col justify-center items-start h-[200px]'>
-                        <h1 className='text-6xl'>Kelvin Tersoo Jiraji</h1>
-                        <h1>Designation</h1>
-                        <button className='bg-blue-600 text-xl p-2 px-4 text-gray-100 font-bold rounded-md mt-2 flex items-center'>Connect <img src={linkedin} className='ml-4 h-[80%] ' /></button>
+                        <h1 className='text-6xl text-gray-100 font-semibold'>Kelvin Tersoo Jiraji</h1>
+                        <h1 className='text-gray-600'>Co-convener</h1>
+                        <a className='bg-blue-600 text-xl p-2 px-4 text-gray-100 font-bold rounded-md mt-2 flex items-center'>Connect <img src={linkedin} className='ml-4 h-[80%] ' /></a>
                     </div>
                 </div>
-                <div className='w-full bg-gradient-to-r from-[#005720] to-[#10582b] flex flex-col items-center py-12'>
+                <div id="speakers-section" className='w-full bg-gradient-to-r from-[#005720] to-[#10582b] flex flex-col items-center py-12'>
                     <h1 className='text-6xl font-semibold text-white'>The Speakers</h1>
                     <div className='mt-16 grid grid-cols-2 justify-center'>
                         <div className='flex flex-col items-center mx-8'>
@@ -302,6 +307,10 @@ const Homepage = () => {
                 <div className='w-full h-[300px] flex '>
                     <div className='flex flex-col items-start w-1/2 h-full p-4'>
                         <h1 className='text-8xl '>Get in Touch</h1>
+                        <div className='flex items-center mt-auto'>
+                            <img className='h-4 mr-2' src={phone}></img>
+                            <h1 className='md:text-lg lg:text-xl font-light color-[#1a1a1a]'>+2347035652264</h1>
+                        </div>
                         <div className='flex items-center mt-auto'>
                             <img className='h-4 mr-2' src={phone}></img>
                             <h1 className='md:text-lg lg:text-xl font-light color-[#1a1a1a]'>+1 (617) 602-6272</h1>
