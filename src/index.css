@@ -26,6 +26,12 @@ code {
   background-position: center;
 }
 
+@media (max-width: 900px) {
+  . {
+    flex-direction: column;
+  }
+}
+
 .shadower {
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
 }
